@@ -1,3 +1,5 @@
+/* ----- FONTS ----- */
+
 @font-face {
     font-family: SourceSansPro;
     src: url(../assets/source-sans-pro_bold.otf);
@@ -16,7 +18,7 @@
     font-family: SourceSansPro;
     src: url(../assets/source-sans-pro_italic.otf);
     font-weight: 400;
-    font-style: italic; 
+    font-style: italic;
     font-display: swap;
 }
 
@@ -48,42 +50,38 @@ body {
     text-align: center;
 }
 
-/* ----- HEADER (Tam sağa və sola yapışması üçün yeniləndi) ----- */
+/* ----- HEADER ----- */
 
 header {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Botun axtardığı əsas detal: Ekranın tam eni */
+    width: 100%;
     display: flex;
-    justify-content: space-between; /* Loqonu sola, menyunu sağa atır */
+    justify-content: space-between;
     align-items: center;
-    padding: 40px 100px; /* Kənarlardan səliqəli boşluq */
-    background-color: transparent; /* Transparent tələbi */
+    padding: 28px 180px;
+    background-color: transparent;
     z-index: 100;
 }
 
-header div {
+header nav {
     display: flex;
     gap: 40px;
+    align-items: center;
 }
 
 header a {
     color: white;
-    font-weight: bold; /* Bold tələbi */
+    font-weight: 700;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
 }
 
-/* ----- MAIN & HERO ----- */
+/* ----- HERO SECTION ----- */
 
-main {
-    width: 100%;
-}
-
-section.hero {
-    /* Radial gradient və tünd fon tələbi */
-    background-image: radial-gradient(circle, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 100%), url("../assets/background.png");
+.hero {
+    background-image: url("../assets/background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -92,98 +90,377 @@ section.hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 180px; /* Header-dən aşağı düşməsi üçün */
-    padding-bottom: 80px;
+    justify-content: center;
+    position: relative;
 }
 
-/* TITLE SECTION (Get schooled) */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
 
-section .title {
+.hero-content {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
-.title h1 {
-    font-size: 100px;
-    font-weight: bold; /* Large bold heading */
-    margin-bottom: 20px;
+.hero-content h1 {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 10px;
 }
 
-.title p {
-    font-size: 18px;
-    font-weight: bold;
-    word-spacing: 50px; /* 3 keywords horizontal row tələbi (Köhnə qarışıq hack silindi) */
+.hero-content .keywords {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    font-size: 16px;
+    font-weight: 700;
     margin-bottom: 40px;
+    color: white;
 }
 
-button {
+/* ----- BUTTON ----- */
+
+.btn-primary {
     background-color: #C271FF;
     color: white;
     border: none;
-    border-radius: 50px; /* Purple rounded button */
-    padding: 15px 40px;
-    font-weight: bold;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-weight: 700;
     font-size: 14px;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* ----- PROS SECTION (Learn from the pros) ----- */
+/* ----- PROS SECTION ----- */
 
-section .pros {
+.pros {
+    background-color: white;
+    color: #071629;
+    padding: 80px 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 1000px; /* Elementləri səliqəli mərkəzə yığır */
-    margin: 0 auto;
 }
 
-section .pros h2 {
+.pros h2 {
     font-size: 32px;
     font-weight: 300;
     margin-bottom: 60px;
 }
 
 .purple-word {
-    font-weight: bold;
-    color: #C271FF; /* "Learn" in purple */
+    font-weight: 700;
+    color: #C271FF;
 }
 
-section .people {
+.people {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* 4 profilin eyni ölçüdə yayılması */
+    justify-content: space-between;
     width: 100%;
     gap: 20px;
 }
 
-section .people div {
+.pro-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1; /* Hər profil eyni yeri tutur */
+    flex: 1;
 }
 
 .round-image {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* circular profile images */
+    border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
 }
 
-section .people h3 {
-    font-weight: bold; /* bold names */
+.pro-card h3 {
+    font-weight: 700;
     font-size: 16px;
     margin-bottom: 5px;
+    color: #071629;
 }
 
-section .people blockquote {
-    font-style: italic; /* italic descriptions */
+.pro-card .subtitle {
+    font-style: italic;
     font-size: 14px;
-    line-height: 1.5;
+    color: #071629;
     opacity: 0.8;
+}
+
+/* ----- AUTHOR/QUOTE SECTION ----- */
+
+.author {
+    background-color: #C271FF;
+    padding: 80px 180px;
+}
+
+.author > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.author img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.author blockquote {
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.author .name {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.author .occupation {
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* ----- TUTORIALS SECTION ----- */
+
+.tutorials {
+    background-color: white;
+    color: #071629;
+    padding: 80px 180px;
+}
+
+.tutorials h1 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+
+.tutorials .group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.tutorials .item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    text-align: left;
+}
+
+.tutorials .item > img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.tutorials .item h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.tutorials .item .desc {
+    font-size: 14px;
+    color: #071629;
+    opacity: 0.7;
+    margin-bottom: 15px;
+}
+
+.tutorials .publisher {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.tutorials .publisher .round-image {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0;
+}
+
+.tutorials .publisher h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #C271FF;
+}
+
+.tutorials .review-length {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.tutorials .stars {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+}
+
+.tutorials .stars img {
+    width: 15px;
+    height: 15px;
+}
+
+.tutorials .length {
+    font-size: 14px;
+    color: #C271FF;
+    font-weight: 700;
+}
+
+/* ----- MEMBERSHIPS SECTION ----- */
+
+.memberships {
+    background-color: #071629;
+    color: white;
+    padding: 80px 180px;
+}
+
+.memberships h1 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+
+.members {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 15px;
+}
+
+.member img {
+    width: 50px;
+    height: 50px;
+}
+
+.member h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.member p {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* ----- FAQ SECTION ----- */
+
+.faq {
+    background-color: white;
+    color: #071629;
+    padding: 80px 180px;
+}
+
+.faq h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.faq-bloc {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-row {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.faq-item {
+    flex: 1;
+}
+
+.faq-item h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 14px;
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+/* ----- FOOTER ----- */
+
+footer {
+    background-color: #071629;
+    padding: 40px 180px;
+}
+
+.footer-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.socials img {
+    width: 25px;
+    height: 25px;
+}
+
+footer p {
+    font-size: 12px;
+    opacity: 0.5;
 }
