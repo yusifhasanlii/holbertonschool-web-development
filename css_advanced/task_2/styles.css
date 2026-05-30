@@ -1,161 +1,198 @@
-/* ================= GLOBAL RESET ================= */
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../assets/source-sans-pro_bold.otf);
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../assets/source-sans-pro_light.otf);
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../assets/source-sans-pro_italic.otf);
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../assets/source-sans-pro_regular.otf);
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: SpinCycleOT;
+    src: url(../assets/spin-cycle-ot.otf);
+    font-display: swap;
+}
+
+/* ----- GENERAL ----- */
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
 }
 
 body {
-    font-family: 'Source Sans Pro', Arial, sans-serif;
-    color: #ffffff;
-    background-color: #071629;
-    -webkit-font-smoothing: antialiased;
+    background-color: white;
+    font-family: SourceSansPro;
+    color: white;
+    text-align: center;
 }
 
-/* ================= TRANSPARENT HEADER ================= */
-.header {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 1100px;
-    height: 100px;
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ----- HEADER ----- */
+
+header {
+    width: 800px;
+    margin: 0 auto;
+    height: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: transparent;
-    z-index: 10;
-    padding: 0 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 100;
 }
 
-.header nav {
+header div {
+    width: 234px;
+    height: 15px;
     display: flex;
-    gap: 40px;
+    justify-content: space-between;
 }
 
-.header nav a {
-    color: #ffffff;
+header a {
+    font-size: 12px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
-/* ================= HERO SECTION ================= */
-.hero {
-    position: relative;
-    width: 100%;
-    min-height: 800px;
-    /* Təlimatda yazılan tünd arxa fon şəkli + radial gradient overlay */
-    background: radial-gradient(circle at center, rgba(7, 22, 41, 0.3) 0%, #071629 100%), 
-                url("../assets/background-hero.png") no-repeat center top/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 180px 20px 100px 20px;
-}
+/* ----- MAIN ----- */
 
-.hero-content h1 {
-    font-size: 100px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-/* Displayed in a horizontal row */
-.keywords {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-}
-
-/* Purple rounded button */
-.btn-primary {
-    background-color: #C271FF;
-    color: #ffffff;
-    border: none;
-    padding: 15px 40px;
-    border-radius: 25px;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.btn-primary:hover {
-    background-color: #a956e3;
-}
-
-/* ================= PROS SECTION ================= */
-.pros {
-    background-color: #071629;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.pros h2 {
-    font-size: 32px;
-    font-weight: 400;
-    margin-bottom: 60px;
-}
-
-.purple-word {
-    color: #C271FF;
-    font-weight: 700;
-}
-
-.people {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    max-width: 1100px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
-
-.pro-card {
-    flex: 1;
-    min-width: 200px;
-    max-width: 240px;
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Circular profile images */
-.round-image {
+a {
+    font-family: SourceSansPro;
+    color: white;
+    text-align: center;
+}
+
+section {
+    width: 100%;
+}
+
+.hero .title h1 {
+    font-size: 120px;
+}
+
+.title p {
+    width: 100%;
+    max-width: 250px;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-bottom: 25px;;
+}
+
+.title p::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+section.hero {
+    background-image: url("../assets/background.png");
+    background-size: 100% auto;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 75px;
+}
+
+section .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+}
+
+button {
+    background-color: #C271FF;
+    border-radius: 999px;
+    padding: 15px 25px;
+    border: none;
+    color: white;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+section .pros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 75px;
+    margin-top: 150px;
+}
+
+section .pros h2 {
+	font-family: SourceSansPro;
+    font-weight: 300;
+    font-size: 32px;
+}
+
+.purple-word {
+    font-weight: 600;
+    color: #C271FF;
+}
+
+section .people p {
+    font-family: SourceSansPro;
+    font-weight: 300;
+}
+
+section .people {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 125px;
+    width: 100%;
+}
+
+section .people div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
     width: 150px;
-    height: 150px;
+}
+
+.round-image {
     border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 25px;
-}
-
-.pro-card h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-/* Italic descriptions below each */
-.subtitle {
-    font-size: 14px;
-    font-style: italic;
-    opacity: 0.75;
-    line-height: 1.5;
-}
-
-/* ================= OTHER SECTIONS (Dizaynı tamamlamaq üçün) ================= */
-.author, .tutorials, .memberships, .faq, footer {
-    background-color: #071629;
-    padding: 60px 20px;
-    color: #ffffff;
 }
