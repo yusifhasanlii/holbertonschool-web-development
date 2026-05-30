@@ -1,143 +1,154 @@
-/* --- Qlobal Stillər --- */
-body {
+/* ----- GENERAL ----- */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-    background-color: #0b0d17;
-    color: white;
 }
 
-/* --- HEADER HİSSƏSİ --- */
-.header {
-    position: absolute;
-    top: 0;
+html {
+    scroll-behavior: smooth;
     width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: white;
+    font-family: SourceSansPro;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----- HEADER ----- */
+header {
+    width: 800px;
+    margin: 0 auto;
+    height: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
-    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
     z-index: 100;
 }
 
-.logo-link {
+header div {
+    width: 234px;
+    height: 15px;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+}
+
+header a, a {
+    font-size: 12px;
     text-decoration: none;
-    gap: 15px;
-}
-
-.logo-icon {
-    width: 30px;
-    height: auto;
-}
-
-.logo-text {
-    height: 25px;
-    width: auto;
-}
-
-.navbar {
-    display: flex;
-    gap: 40px;
-}
-
-.navbar a {
+    font-family: SourceSansPro;
     color: white;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
+    text-align: center;
 }
 
-/* --- BANNER / HERO HİSSƏSİ --- */
-.hero {
-    /* Arxa plan şəkli və üzərindəki tünd qradiyent effekti */
-    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 0%, rgba(2, 21, 43, 0.9) 100%), 
-                url('images/pic_1.png') no-repeat top center / cover;
-    text-align: center;
+/* ----- MAIN (Hero Banner) ----- */
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 160px 20px 80px 20px;
 }
 
-.hero h1 {
-    font-size: 90px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.keywords {
-    display: flex;
-    gap: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-top: 20px;
-}
-
-.btn-primary {
-    background-color: #C271FF;
-    color: white;
-    padding: 15px 35px;
-    border-radius: 40px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 14px;
-    text-transform: uppercase;
-    margin: 40px 0;
-}
-
-.pros-title {
-    font-size: 32px;
-    font-weight: 400;
-    margin-top: 40px;
-    margin-bottom: 50px;
-}
-
-.purple-text {
-    color: #C271FF;
-    font-weight: bold;
-}
-
-/* --- PROS (MÜTƏXƏSSİSLƏR) ŞƏBƏKƏSİ --- */
-.pros-grid {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    max-width: 1000px;
+section {
     width: 100%;
-    flex-wrap: wrap;
 }
 
-.pro-card {
+section.hero {
+    background-image: url("../assets/background.png");
+    background-size: 100% auto;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 160px;
+    width: 100%;
+    min-height: 100vh;
+    padding: 75px;
 }
 
-.pro-card img {
+section .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+}
+
+.hero .title h1 {
+    font-size: 120px;
+}
+
+.title p {
+    width: 100%;
+    max-width: 250px;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-bottom: 25px;;
+}
+
+.title p::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+button {
+    background-color: #C271FF;
+    border-radius: 999px;
+    padding: 15px 25px;
+    border: none;
+    color: white;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+section .pros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 75px;
+    margin-top: 150px;
+}
+
+section .pros h2 {
+	font-family: SourceSansPro;
+    font-weight: 300;
+    font-size: 32px;
+}
+
+.purple-word {
+    font-weight: 600;
+    color: #C271FF;
+}
+
+section .people {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 125px;
+    width: 100%;
+}
+
+section .people div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
     width: 150px;
-    height: 150px;
+}
+
+section .people p {
+    font-family: SourceSansPro;
+    font-weight: 300;
+}
+
+.round-image {
     border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-.pro-card h3 {
-    font-weight: 900;
-    font-size: 18px;
-    margin: 0 0 8px 0;
-    text-align: center;
-}
-
-.pro-card p {
-    font-weight: 400;
-    font-style: italic;
-    font-size: 14px;
-    line-height: 1.4;
-    margin: 0;
-    text-align: center;
 }
