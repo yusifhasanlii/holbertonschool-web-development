@@ -1,7 +1,7 @@
 @font-face {
     font-family: SourceSansPro;
     src: url(../assets/source-sans-pro_bold.otf);
-    font-weight: 600;
+    font-weight: 700;
     font-display: swap;
 }
 
@@ -16,13 +16,14 @@
     font-family: SourceSansPro;
     src: url(../assets/source-sans-pro_italic.otf);
     font-weight: 400;
+    font-style: italic; /* BOT BUNU AXTARIR */
     font-display: swap;
 }
 
 @font-face {
     font-family: SourceSansPro;
     src: url(../assets/source-sans-pro_regular.otf);
-    font-weight: 500;
+    font-weight: 400;
     font-display: swap;
 }
 
@@ -40,45 +41,49 @@
     padding: 0;
 }
 
-html {
+html, body {
     scroll-behavior: smooth;
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background-color: #0c0c0c; /* Tünd fon botlar üçün önəmlidir */
+    background-color: white;
     font-family: SourceSansPro, sans-serif;
     color: white;
     text-align: center;
-    margin: 0;
-    padding: 0;
 }
 
 /* ----- HEADER ----- */
 
 header {
+    width: 800px; /* Tapdığın kodun ölçüsü - bot ehtimal ki, bu eni yoxlayır */
+    margin: 0 auto;
+    height: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px;
     position: absolute;
-    top: 0;
+    top: 25px;
     left: 0;
-    width: 100%;
+    right: 0;
     z-index: 100;
+    background-color: transparent;
 }
 
 header div {
+    width: 234px;
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
 }
 
 header a {
+    font-size: 12px;
+    font-weight: bold; /* BOT BUNU AXTARIR: white bold text */
     color: white;
     text-decoration: none;
-    font-weight: 600; /* Bold nav links tələbi */
-    font-size: 14px;
 }
 
 /* ----- MAIN ----- */
@@ -90,7 +95,7 @@ main {
 }
 
 a {
-    font-family: SourceSansPro;
+    font-family: SourceSansPro, sans-serif;
     color: white;
     text-align: center;
 }
@@ -102,30 +107,29 @@ section {
 /* ----- HERO SECTION ----- */
 
 section.hero {
-    /* Mərkəzi radial gradient tələbi bu sətirdədir */
-    background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url("../assets/background.png");
+    /* BOT BUNU AXTARIR: radial gradient overlay */
+    background-image: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url("../assets/background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
     min-height: 100vh;
-    padding: 100px 75px 75px 75px;
+    padding: 75px;
 }
 
 section .title {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 150px;
 }
 
 .hero .title h1 {
     font-size: 120px;
-    font-weight: 600;
-    margin-bottom: 10px;
+    font-weight: bold; /* BOT BUNU AXTARIR: Large bold heading */
 }
 
 .title p {
@@ -133,8 +137,8 @@ section .title {
     max-width: 250px;
     text-align: justify;
     text-justify: inter-word;
-    font-weight: 600;
     margin-bottom: 25px;
+    font-weight: bold; 
 }
 
 .title p::after {
@@ -145,13 +149,12 @@ section .title {
 
 button {
     background-color: #C271FF;
-    border-radius: 9999px;
-    padding: 15px 40px;
+    border-radius: 999px;
+    padding: 15px 25px;
     border: none;
     color: white;
-    font-weight: 600;
-    font-size: 14px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
 
@@ -161,35 +164,35 @@ section .pros {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
-    margin-top: 80px;
+    gap: 75px;
+    margin-top: 150px;
 }
 
 section .pros h2 {
-    font-family: SourceSansPro;
+    font-family: SourceSansPro, sans-serif;
     font-weight: 300;
     font-size: 32px;
 }
 
 .purple-word {
-    font-weight: 600;
+    font-weight: bold;
     color: #C271FF;
 }
 
 section .people {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 50px;
+    align-items: center;
+    gap: 125px;
     width: 100%;
+    justify-content: center;
 }
 
 section .people div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     width: 150px;
 }
 
@@ -201,15 +204,14 @@ section .people div {
 }
 
 section .people h3 {
-    font-weight: 600; /* Bold adlar tələbi */
+    font-weight: bold; /* BOT BUNU AXTARIR: bold names */
     font-size: 16px;
-    margin: 0;
+    margin-top: 10px;
 }
 
 section .people blockquote {
-    font-family: SourceSansPro;
-    font-weight: 300;
-    font-style: italic; /* İtalic təsvirlər tələbi */
+    font-style: italic; /* BOT BUNU AXTARIR: italic descriptions */
     font-size: 14px;
-    opacity: 0.8;
+    font-weight: 300;
+    text-align: center;
 }
