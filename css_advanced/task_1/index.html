@@ -1,446 +1,215 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url("fonts/SourceSansPro-ExtraLight.otf") format("opentype");
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url("fonts/SourceSansPro-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url("fonts/SourceSansPro-Semibold.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url("fonts/SourceSansPro-ExtraLightIt.otf") format("opentype");
-  font-weight: 200;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url("fonts/SourceSansPro-Black.otf") format("opentype");
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url("fonts/SourceSansPro-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
-body {
-  position: relative;
-}
-body ul,
-a {
-  text-decoration: none;
-  list-style: none;
-}
-body .register {
-  width: 162px;
-  height: 44px;
-  margin-top: 40px;
-  color: #ffffff;
-  background-color: #c271ff;
-  border: none;
-  font-weight: 500;
-  font-size: 14px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-body,
-.register {
-  font-family: "Source Sans Pro", sans-serif;
-}
-body .different-font {
-  font-weight: 700;
-  color: #c271ff;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 29px;
-  margin: 0 auto;
-  max-width: 1103px;
-  padding-top: 45px;
-  padding-bottom: 95px;
-  flex-wrap: wrap;
-}
-.header__right ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 53px;
-}
-.header__right ul li a {
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 12px;
-}
-.header__section {
-  background-image: radial-gradient(circle, #29303D, #071629), url("img/background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #071629;
-  width: 100%;
-}
-#schooled {
-  padding-top: 95px;
-}
-.schooled__div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 90px;
-}
-.schooled__div h1 {
-  font-size: 120px;
-  color: #ffffff;
-  font-weight: 700;
-}
-.schooled-text {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  align-items: center;
-}
-.schooled-text p {
-  color: #ffffff;
-  font-weight: bolder;
-  font-size: 16px;
-  font-weight: 700;
-}
-.schooled__learn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 1009px;
-  margin: 0 auto;
-}
-.schooled__learn h2 {
-  padding-top: 90px;
-  font-weight: 300;
-  font-size: 32px;
-  color: #ffffff;
-}
-.schooled-terms {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-flow: wrap;
-  width: 100%;
-  padding-top: 85px;
-  padding-bottom: 80px;
-}
-.schooled-term {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.schooled-term img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.schooled-term h3 {
-  font-size: 18px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: #ffffff;
-  font-style: normal;
-  font-weight: 900;
-}
-.schooled-term p {
-  font-size: 16px;
-  font-style: italic;
-  font-weight: 200;
-  color: #ffffff;
-}
-#comment {
-  background-color: #c271ff;
-  padding-top: 90px;
-  padding-bottom: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-#comment h2 {
-  color: #ffffff;
-  font-weight: 700;
-  font-style: normal;
-  margin-bottom: 10px;
-  font-size: 30px;
-}
-#comment .comment__div {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 53px;
-  flex-wrap: wrap;
-}
-.comment__div img {
-  border-radius: 50%;
-}
-.comment-quote {
-  max-width: 703px;
-}
-.comment-quote blockquote {
-  font-weight: 400;
-  font-style: normal;
-  font-size: 22px;
-  color: #ffffff;
-  line-height: 33.6px;
-  padding-bottom: 30px;
-}
-
-.comment-quote .person-name {
-  font-weight: 700;
-  font-style: normal;
-  color: white;
-  font-size: 22px;
-}
-.comment-quote .weather-presenter {
-  color: #ffffff;
-  font-weight: 200;
-  font-style: italic;
-  font-size: 22px;
-  padding-top: 5px;
-}
-
-#tutorials {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  max-width: 1228px;
-  margin: 0 auto;
-  padding: 85px 0 85px 0;
-}
-#tutorials h1 {
-    font-size: 32px;
-    font-weight: 200;
-    font-style: normal;
-    padding-bottom: 70px;
-}
-.tutorials__videos__div{
-  width: 100%;
-}
-.tutorials__videos {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-.video {
-    position: relative;
-    border: 1px solid #D8D8D8;
-    border-radius: 10px;
-    width: 255px;
-}
-.video-preview{
-  object-fit: contain;
-}
-.video-body {
-  padding: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-}
-
-.video h2 {
-  font-weight: 700;
-  font-style: normal;
-  font-size: 16px;
-}
-.video p {
-  font-weight: 400;
-  font-style: normal;
-  color: #6c757d;
-  font-size: 14px;
-  line-height: 24px;
-}
-.video-author img {
-  border-radius: 50%;
-}
-.video-author h3{
-  font-style: normal;
-  font-weight: 500;
-  color: #c271ff;
-  font-size: 14px;
-}
-.video-play {
-  position: absolute;
-  top: 15%;
-  left: 35%;
-}
-.video-author {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-.video-rating {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.video-rating p{
-    font-weight: 500;
-    font-style: normal;
-    font-size: 14px;
-    color: #c271ff;
-}
-#memberships {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  background-color: #071629;
-  padding-top: 80px;
-  padding-bottom: 48px;
-
-}
-#memberships h1{
-  font-size: 32px;
-  font-weight: 200;
-  font-style: normal;
-  color: #ffffff;
-  padding-bottom: 60px;
-}
-.memberships__div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 75%;
-  }
-.membership {
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  padding-bottom: 40px;
-}
-.membership h2{
-  font-size: 18px;
-  color: #ffffff;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 26px;
-}
-.membership p{
-  font-size: 14px;
-  color: #ffffff;
-  line-height: 26px;
-  font-weight: 400;
-  font-style: normal;
-  width: 70%;
-  text-align: center;
-}
-
-
-#faq .faq__div h1{
-  font-size: 60px;
-  font-weight: 200;
-  font-style: normal;
-  padding-bottom: 70px;
-}
-.faq__div{
-  max-width: 920px;  
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 80px 0 80px 0;
-}
-.faq-item h2{
-  font-size: 16px;
-  font-weight: 700;
-  font-style: normal;
-}
-.faq-rows {
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  flex-direction: column;
-  gap: 70px;
-  width: 100%;
-}
-.faq-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-
-}
-.faq-item {
-  width: 350px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-.faq-item p {
-  line-height: 24px;
-  font-size: 14px;
-  color: #6c757d;
-  font-weight: 400;
-  font-style: normal;
-}
-
-footer {
-  background-color: #071629;
-}
-.footer {
-  display: flex;
-  height: 246px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 50px;
-}
-.footer p {
-  color: #6c757d;
-  padding-top: 48px;
-}
-.footer__div {
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.footer-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Page</title>
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img src="../assets/logo.svg" alt="Logo">
+        </a>
+        <div>
+            <a href="/">COURSES</a>
+            <a href="/">PRICING</a>
+            <a href="/">LOGIN</a>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="title">
+                <h1>Get schooled</h1>
+                <p>SMILES GRIN LAUGH</p>
+                <button>REGISTER FOR FREE</button>
+            </div>
+            <div class="pros">
+                <h2><span class="purple-word">Learn</span> from the pros</h2>
+                <div class="people">
+                    <div>
+                        <img src="../assets/profile_1.png" alt="Person" class="round-image">
+                        <h3>Philip Massey</h3>
+                        <blockquote>« Smile of the year » 2018 - 2019</blockquote>
+                    </div>
+                    <div>
+                        <img src="../assets/profile_2.png" alt="Person" class="round-image">
+                        <h3>Nannie Lawrence</h3>
+                        <blockquote>Best « little smile » 2017</blockquote>
+                    </div>
+                    <div>
+                        <img src="../assets/profile_3.png" alt="Person" class="round-image">
+                        <h3>Bruce Walters</h3>
+                        <blockquote>Best « Friend Smile » live performance 2019</blockquote>
+                    </div>
+                    <div>
+                        <img src="../assets/profile_4.png" alt="Person" class="round-image">
+                        <h3>Henry Hughes</h3>
+                        <blockquote>« 24h smiles » winner 2016 - 2019</blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="author">
+            <div>
+                <img src="../assets/author.png" alt="Person">
+                <div>
+                    <blockquote>« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun!</blockquote>
+                    <p class="name">Person Name</p>
+                    <p class="occupation">weather presenter</p>
+                </div>
+            </div>
+        </section>
+        <section class="tutorials">
+            <h1>Most <span class="purple-word">popular</span> tutorials</h1>
+            <div class="group">
+                <div class="item">
+                    <img src="../assets/preview_1.png" alt="Tutorial Preview">
+                    <h2>Diagonal Smile</h2>
+                    <p class="desc">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+                    <div class="publisher">
+                        <img src="../assets/person_1.png" alt="Person" class="round-image">
+                        <h3>Philip Massey</h3>
+                    </div>
+                    <div class="review-length">
+                        <div class="stars">
+                            <img src="../assets/star_a.svg" alt="Star Full">
+                            <img src="../assets/star_a.svg" alt="Star Full">
+                            <img src="../assets/star_a.svg" alt="Star Full">
+                            <img src="../assets/star_a.svg" alt="Star Full">
+                            <img src="../assets/star_b.svg" alt="Star Empty">
+                        </div>
+                        <p class="length">8 min</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../assets/preview_2.png" alt="Tutorial Preview">
+                    <h2>Sad Smile</h2>
+                    <p class="desc">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+                    <div class="publisher">
+                        <img src="../assets/person_1.png" alt="Person" class="round-image">
+                        <h3>Philip Massey</h3>
+                    </div>
+                    <div class="review-length">
+                        <div class="stars">
+                            <img src="../assets/star_a.svg" alt="Star Full">
+                            <img src="../assets/star_a.svg" alt="Star Full">
+                            <img src="../assets/star_a.svg" alt="Star Full">
+                            <img src="../assets/star_a.svg" alt="Star Full">
+                            <img src="../assets/star_b.svg" alt="Star Empty">
+                        </div>
+                        <p class="length">8 min</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../assets/preview_3.png" alt="Tutorial Preview">
+                    <h2>Natural Smile</h2>
+                    <p class="desc">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+                    <div class="publisher">
+                        <img src="../assets/person_1.png" alt="Person" class="round-image">
+                        <h3>Philip Massey</h3>
+                    </div>
+                    <div class="review-length">
+                        <div class="stars">
+                            <img src="../assets/star_a.svg" alt="Star Full">
+                            <img src="../assets/star_a.svg" alt="Star Full">
+                            <img src="../assets/star_a.svg" alt="Star Full">
+                            <img src="../assets/star_a.svg" alt="Star Full">
+                            <img src="../assets/star_b.svg" alt="Star Empty">
+                        </div>
+                        <p class="length">8 min</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../assets/preview_4.png" alt="Tutorial Preview">
+                    <h2>Happy Smile</h2>
+                    <p class="desc">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+                    <div class="publisher">
+                        <img src="../assets/person_1.png" alt="Person" class="round-image">
+                        <h3>Philip Massey</h3>
+                    </div>
+                    <div class="review-length">
+                        <div class="stars">
+                            <img src="../assets/star_a.svg" alt="Star Full">
+                            <img src="../assets/star_a.svg" alt="Star Full">
+                            <img src="../assets/star_a.svg" alt="Star Full">
+                            <img src="../assets/star_a.svg" alt="Star Full">
+                            <img src="../assets/star_b.svg" alt="Star Empty">
+                        </div>
+                        <p class="length">8 min</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="memberships">
+            <h1><span class="purple-word">Free</span> membership</h1>
+            <div class="members">
+                <div class="member">
+                    <img src="../assets/smile.svg" alt="Smile">
+                    <h2>Lorem ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="member">
+                    <img src="../assets/smile.svg" alt="Smile">
+                    <h2>Lorem ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="member">
+                    <img src="../assets/smile.svg" alt="Smile">
+                    <h2>Lorem ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="member">
+                    <img src="../assets/smile.svg" alt="Smile">
+                    <h2>Lorem ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <button>REGISTER FOR FREE</button>
+        </section>
+        <section class="faq">
+            <h1>F.A.Q.</h1>
+            <div class="faq-bloc">
+                <div class="faq-row">
+                    <div class="faq-item">
+                        <h2>How does this work?</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h2>How does this work?</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="faq-row">
+                    <div class="faq-item">
+                        <h2>How does this work?</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h2>How does this work?</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-all">
+            <div class="logos">
+                <img src="../assets/logo.svg" alt="Logo">
+                <div class="socials">
+                    <a href="/">
+                        <img src="../assets/icon_facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="/">
+                        <img src="../assets/icon_twitter.svg" alt="Twitter">
+                    </a>
+                    <a href="/">
+                        <img src="../assets/icon_instagram.svg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+            <p>©smileschool 2020</p>
+        </div>
+    </footer>
+</body>
+</html>
