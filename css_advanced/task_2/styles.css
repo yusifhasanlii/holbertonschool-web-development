@@ -1,4 +1,6 @@
-/* ================= GLOBAL REFINEMENT ================= */
+/* ================= GLOBAL RESET & FONTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,153 +8,160 @@
 }
 
 body {
-    /* Figmadakı rəsmi şrift və ana rəng */
     font-family: 'Source Sans Pro', Arial, sans-serif;
     color: #ffffff;
     -webkit-font-smoothing: antialiased;
+    background-color: #071629;
 }
 
-/* ================= HEADER ================= */
-.header {
+/* ================= 1. TRANSPARENT NAVIGATION BAR ================= */
+header, .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent; /* Şəffaf naviqasiya */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    /* Figma Layout Ölçüləri */
-    position: absolute;
-    top: 35px;                  /* Figma: 35.02px */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 1100px;          /* Figma: 1103.41px */
-    height: 30px;               /* Figma: 29.46px */
+    padding: 35px 10%; /* Kənarlardan nizamlı boşluq */
     z-index: 10;
 }
 
-/* Loqo Ölçüsü */
-.header a img {
-    width: 167px;               /* Figma: 167.02px */
+/* Logo (icon + text) aligned to the left */
+header .logo, .header a {
+    display: flex;
+    align-items: center;
+}
+
+header img, .header img {
+    width: 167px;
     height: auto;
 }
 
-.header nav {
+/* 3 nav links in white bold text aligned to the right */
+header nav, .header nav {
     display: flex;
-    gap: 30px;                  /* Linklərin bir-birindən olan məsafəsi */
+    gap: 30px;
 }
 
-.header nav a {
+header nav a, .header nav a {
+    color: #ffffff;
     text-decoration: none;
-    color: #ffffff;             /* Figma: #FFFFFF */
+    font-weight: 700; /* Bold text */
     font-size: 12px;
-    font-weight: 700;           /* Bold */
-    text-transform: uppercase;   /* Böyük hərflərlə */
+    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-/* ================= HERO (MAIN FIRST SECTION) ================= */
-.hero {
-    /* Figma: Hündürlük 1055px və Radial Gradient/Maska Rəngi #071629 */
-    background: #071629 url("assets/background-hero.png") no-repeat center top/cover;
-    min-height: 1055px;         /* Figma Bitmap: 1055px */
+/* ================= 2. HERO SECTION ================= */
+/* Dark background image with a radial gradient overlay */
+hero, .hero {
+    position: relative;
     width: 100%;
-    color: #ffffff;
+    min-height: 1055px;
+    /* Həm şəkli, həm də radial gradient overlay-i eyni anda tətbiq edirik */
+    background-image: radial-gradient(circle at center, rgba(7, 22, 41, 0.4) 0%, #071629 100%), url("assets/background-hero.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    padding-top: 250px;
     text-align: center;
-    padding-top: 250px;         /* Kontentin yuxarıdan vizual boşluğu */
 }
 
-.hero-content {
-    max-width: 1100px;
-    width: 100%;
+/* Large bold heading “Get schooled” centered */
+hero h1, .hero h1 {
+    font-size: 100px;
+    font-weight: 700; /* Bold */
+    margin-bottom: 20px;
+    letter-spacing: -2px;
 }
 
-/* HERO TEXT */
-.hero-content h1 {
-    font-size: 100px;           /* Figma Başlığı */
-    font-weight: 700;
-    margin-bottom: 0px;
-    line-height: 1.1;
-}
-
-.hero-content p {
+/* 3 keywords (SMILES, GRIN, LAUGH) displayed in a horizontal row */
+.keywords-row, hero p, .hero p {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Horizontal row aralarındakı boşluq */
     font-size: 16px;
     font-weight: 700;
-    margin-bottom: 50px;
     text-transform: uppercase;
-}
-
-/* SMILES GRIN LAUGH sözlərinin nizamlı durması üçün */
-.hero-content p span {
-    margin: 0 20px; 
-}
-
-/* Qeydiyyat Düyməsi */
-.hero-content button {
-    background-color: #C271FF;   /* Figma Əsas Purple rəngi */
-    color: #ffffff;
-    border: none;
-    padding: 15px 35px;
-    border-radius: 25px;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
-/* ================= PROS SECTION ================= */
-.pros {
-    margin-top: 120px;          /* Düymə ilə Pros başlığı arasındakı Figma məsafəsi */
-    width: 100%;
-    max-width: 1100px;
-}
-
-.pros h2 {
-    font-family: 'Source Sans Pro', Arial, sans-serif;
-    font-size: 32px;            /* Figma: 32px */
-    font-weight: 700;           /* Figma: 700 */
-    line-height: 100%;          /* Figma: 100% */
-    letter-spacing: 0px;        /* Figma: 0px */
     margin-bottom: 60px;
 }
 
-.learn {
-    color: #C271FF;
+/* Purple rounded “REGISTER FOR FREE” button centered */
+hero button, .hero button, .hero .btn {
+    background-color: #C271FF; /* Purple */
+    color: #ffffff;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 25px; /* Rounded */
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
 }
 
-.pros-list {
+/* ================= 3. PROS SECTION ================= */
+pros, .pros {
+    width: 100%;
+    max-width: 1100px;
+    margin: 120px auto 0 auto;
+    text-align: center;
+}
+
+/* “Learn from the pros” subtitle with “Learn” in purple */
+pros h2, .pros h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+pros h2 span, .pros h2 .learn {
+    color: #C271FF; /* Learn in purple */
+}
+
+/* 4 circular profile images aligned horizontally */
+.pros-list, pros .grid {
     display: flex;
     justify-content: center;
-    gap: 40px;                  /* Kartlar arasındakı boşluq */
+    gap: 50px; /* Horizontally aligned */
 }
 
-.pro {
+.pro, .pro-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 200px;
-    text-align: center;
 }
 
-/* Profil şəkillərinin dairəvi forması */
-.pro img {
-    width: 150px; 
+/* Circular profile images */
+.pro img, .pro-card img {
+    width: 150px;
     height: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+    border-radius: 50%; /* Circular */
     object-fit: cover;
+    margin-bottom: 20px;
 }
 
-.pro h3 {
+/* Bold names */
+.pro h3, .pro-card h3 {
     font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
+    font-weight: 700; /* Bold names */
+    margin-bottom: 8px;
+    color: #ffffff;
 }
 
-.pro p {
+/* Italic descriptions below each */
+.pro p, .pro-card p {
     font-size: 14px;
-    opacity: 0.8;
+    font-style: italic; /* MÜTLƏQ İTALİK OLMALIDIR */
+    color: #ffffff;
+    opacity: 0.75;
     line-height: 1.4;
 }
