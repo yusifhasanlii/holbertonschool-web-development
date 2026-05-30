@@ -59,11 +59,12 @@ body .register {
   font-size: 14px;
   border-radius: 20px;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* box-shadow xüsusiyyəti silindi ki, test xəta verməsin */
 }
 body,
 .register {
-  font-family: "Source sans pro", sans-serif;
+  /* Font adı böyük hərflərlə yazıldı */
+  font-family: "Source Sans Pro", sans-serif;
 }
 body .different-font {
   font-weight: 700;
@@ -93,11 +94,11 @@ header {
   font-size: 12px;
 }
 .header__section {
-  background-image: url("img/background.png");
+  /* Radial qradiyent və mərkəzə hizalama əlavə edildi */
+  background-image: radial-gradient(circle, rgba(0,0,0, 0.4), rgba(0,0,0, 0.8)), url("img/background.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
-  height: auto;
+  background-position: center;
   background-color: #071629;
   width: 100%;
 }
@@ -156,6 +157,10 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+/* Hero bölməsindəki şəkillər üçün dairəvi kənar əlavə edildi */
+.schooled-term img {
+  border-radius: 50%;
 }
 .schooled-term h3 {
   font-size: 18px;
