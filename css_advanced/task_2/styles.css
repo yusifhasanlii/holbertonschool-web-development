@@ -1,21 +1,13 @@
-/* --- Global Styles --- */
-* {
+/* --- Qlobal Stillər --- */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: #071629;
+    background-color: #0b0d17;
     color: white;
 }
 
-ul {
-    list-style: none;
-}
-
-/* --- HEADER --- */
+/* --- HEADER HİSSƏSİ --- */
 .header {
     position: absolute;
     top: 0;
@@ -23,108 +15,111 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 10%; /* vw əvəzinə px ilə dəqiq aralıq */
-    background: transparent;
+    padding: 30px 10%;
+    box-sizing: border-box;
     z-index: 100;
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 15px;
+}
+
 .logo-icon {
-    height: 30px;
+    width: 30px;
+    height: auto;
+}
+
+.logo-text {
+    height: 25px;
     width: auto;
 }
 
 .navbar {
     display: flex;
     gap: 40px;
-    align-items: center;
 }
 
 .navbar a {
+    color: white;
     text-decoration: none;
-    color: #ffffff;
-    font-weight: 700;
     font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-/* --- HERO SECTION --- */
+/* --- BANNER / HERO HİSSƏSİ --- */
 .hero {
-    width: 100%;
-    min-height: 100vh;
-    
-    /* Dəqiq rgba dəyərləri və düzgün arxa plan şəkli */
-    background-image: radial-gradient(circle, rgba(41, 48, 61, 0.7), rgba(7, 22, 41, 0.9)), url('images/background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #071629;
-    
+    /* Arxa plan şəkli və üzərindəki tünd qradiyent effekti */
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 0%, rgba(2, 21, 43, 0.9) 100%), 
+                url('images/pic_1.png') no-repeat top center / cover;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding-top: 150px;
-    padding-bottom: 80px;
+    padding: 160px 20px 80px 20px;
 }
 
 .hero h1 {
-    font-size: 120px; /* 8vw əvəzinə dəqiq 120px */
-    font-weight: 700;
-    margin: 0 0 20px 0;
+    font-size: 90px;
+    font-weight: bold;
+    margin: 0;
 }
 
 .keywords {
     display: flex;
     gap: 50px;
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
 }
 
 .btn-primary {
     background-color: #C271FF;
     color: white;
-    padding: 15px 30px; /* Sabit padding */
-    border-radius: 25px;
+    padding: 15px 35px;
+    border-radius: 40px;
     border: none;
-    font-weight: 700;
-    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
-    margin-bottom: 60px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Ehtiyac varsa düymə kölgəsi */
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 40px 0;
 }
 
-/* --- PROFILES SECTION --- */
 .pros-title {
     font-size: 32px;
-    font-weight: 300;
+    font-weight: 400;
+    margin-top: 40px;
     margin-bottom: 50px;
 }
 
 .purple-text {
     color: #C271FF;
-    font-weight: 700;
+    font-weight: bold;
 }
 
+/* --- PROS (MÜTƏXƏSSİSLƏR) ŞƏBƏKƏSİ --- */
 .pros-grid {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px; /* Ekran nə qədər böyüsə də bu qutu sabit qalacaq */
+    justify-content: center;
+    gap: 60px;
+    max-width: 1000px;
     width: 100%;
-    gap: 20px;
-    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .pro-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 150px;
+    width: 160px;
 }
 
 .pro-card img {
-    width: 150px; /* Dəqiq 150 piksel */
+    width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
@@ -132,16 +127,16 @@ ul {
 }
 
 .pro-card h3 {
-    font-weight: 700;
+    font-weight: 900;
     font-size: 18px;
-    margin: 0 0 5px 0;
+    margin: 0 0 8px 0;
     text-align: center;
 }
 
 .pro-card p {
     font-weight: 400;
     font-style: italic;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.4;
     margin: 0;
     text-align: center;
