@@ -1,4 +1,39 @@
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../assets/source-sans-pro_bold.otf);
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../assets/source-sans-pro_light.otf);
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../assets/source-sans-pro_italic.otf);
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../assets/source-sans-pro_regular.otf);
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: SpinCycleOT;
+    src: url(../assets/spin-cycle-ot.otf);
+    font-display: swap;
+}
+
 /* ----- GENERAL ----- */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,11 +51,16 @@ body {
     font-family: SourceSansPro;
     color: white;
     text-align: center;
+}
+
+html,
+body {
     margin: 0;
     padding: 0;
 }
 
 /* ----- HEADER ----- */
+
 header {
     width: 800px;
     margin: 0 auto;
@@ -44,28 +84,52 @@ header div {
     justify-content: space-between;
 }
 
-header a, a {
+header a {
     font-size: 12px;
     text-decoration: none;
-    font-family: SourceSansPro;
-    color: white;
-    text-align: center;
+    font-weight: bold; /* Tələb: White bold text */
 }
 
-/* ----- MAIN (Hero Banner) ----- */
+/* ----- MAIN ----- */
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+a {
+    font-family: SourceSansPro;
+    color: white;
+    text-align: center;
+}
+
 section {
     width: 100%;
 }
 
+.hero .title h1 {
+    font-size: 120px;
+}
+
+.title p {
+    width: 100%;
+    max-width: 250px;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-bottom: 25px;
+}
+
+.title p::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
 section.hero {
-    background-image: url("../assets/background.png");
-    background-size: 100% auto;
+    /* Tələb: Dark background image with a radial gradient overlay */
+    background-image: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url("../assets/background.png");
+    background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
@@ -80,24 +144,6 @@ section .title {
     flex-direction: column;
     align-items: center;
     padding-top: 150px;
-}
-
-.hero .title h1 {
-    font-size: 120px;
-}
-
-.title p {
-    width: 100%;
-    max-width: 250px;
-    text-align: justify;
-    text-justify: inter-word;
-    margin-bottom: 25px;;
-}
-
-.title p::after {
-    content: "";
-    display: inline-block;
-    width: 100%;
 }
 
 button {
@@ -144,7 +190,15 @@ section .people div {
     width: 150px;
 }
 
-section .people p {
+/* Tələb: Bold names and italic descriptions */
+section .people h3 {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+section .people blockquote {
+    font-style: italic;
     font-family: SourceSansPro;
     font-weight: 300;
 }
