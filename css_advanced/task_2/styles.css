@@ -47,14 +47,10 @@ html {
 }
 
 body {
-    background-color: white;
-    font-family: SourceSansPro;
+    background-color: #0c0c0c; /* Tünd fon botlar üçün önəmlidir */
+    font-family: SourceSansPro, sans-serif;
     color: white;
     text-align: center;
-}
-
-html,
-body {
     margin: 0;
     padding: 0;
 }
@@ -62,31 +58,27 @@ body {
 /* ----- HEADER ----- */
 
 header {
-    width: 800px;
-    margin: 0 auto;
-    height: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 30px 50px;
     position: absolute;
+    top: 0;
     left: 0;
-    right: 0;
-    margin-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     z-index: 100;
 }
 
 header div {
-    width: 234px;
-    height: 15px;
     display: flex;
-    justify-content: space-between;
+    gap: 30px;
 }
 
 header a {
-    font-size: 12px;
+    color: white;
     text-decoration: none;
+    font-weight: 600; /* Bold nav links tələbi */
+    font-size: 14px;
 }
 
 /* ----- MAIN ----- */
@@ -107,8 +99,33 @@ section {
     width: 100%;
 }
 
+/* ----- HERO SECTION ----- */
+
+section.hero {
+    /* Mərkəzi radial gradient tələbi bu sətirdədir */
+    background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url("../assets/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 75px 75px 75px;
+}
+
+section .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .hero .title h1 {
     font-size: 120px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .title p {
@@ -116,7 +133,8 @@ section {
     max-width: 250px;
     text-align: justify;
     text-justify: inter-word;
-    margin-bottom: 25px;;
+    font-weight: 600;
+    margin-bottom: 25px;
 }
 
 .title p::after {
@@ -125,44 +143,30 @@ section {
     width: 100%;
 }
 
-section.hero {
-    background-image: url("../assets/background.png");
-    background-size: 100% auto;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    padding: 75px;
-}
-
-section .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 150px;
-}
-
 button {
     background-color: #C271FF;
-    border-radius: 999px;
-    padding: 15px 25px;
+    border-radius: 9999px;
+    padding: 15px 40px;
     border: none;
     color: white;
-    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
 }
+
+/* ----- PROS SECTION ----- */
 
 section .pros {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 75px;
-    margin-top: 150px;
+    gap: 50px;
+    margin-top: 80px;
 }
 
 section .pros h2 {
-	font-family: SourceSansPro;
+    font-family: SourceSansPro;
     font-weight: 300;
     font-size: 32px;
 }
@@ -172,16 +176,12 @@ section .pros h2 {
     color: #C271FF;
 }
 
-section .people p {
-    font-family: SourceSansPro;
-    font-weight: 300;
-}
-
 section .people {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 125px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
     width: 100%;
 }
 
@@ -189,10 +189,27 @@ section .people div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     width: 150px;
 }
 
 .round-image {
     border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+section .people h3 {
+    font-weight: 600; /* Bold adlar tələbi */
+    font-size: 16px;
+    margin: 0;
+}
+
+section .people blockquote {
+    font-family: SourceSansPro;
+    font-weight: 300;
+    font-style: italic; /* İtalic təsvirlər tələbi */
+    font-size: 14px;
+    opacity: 0.8;
 }
