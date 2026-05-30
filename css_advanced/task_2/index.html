@@ -4,52 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <a href="/">
+    <header class="header">
+        <a href="/" class="logo">
             <img src="../assets/logo.svg" alt="Logo">
         </a>
-        <div>
+        <nav>
             <a href="/">COURSES</a>
             <a href="/">PRICING</a>
             <a href="/">LOGIN</a>
-        </div>
+        </nav>
     </header>
+
     <main>
         <section class="hero">
-            <div class="title">
+            <div class="hero-content">
                 <h1>Get schooled</h1>
-                <p>SMILES GRIN LAUGH</p>
-                <button>REGISTER FOR FREE</button>
+                <p class="keywords">
+                    <span>SMILES</span>
+                    <span>GRIN</span>
+                    <span>LAUGH</span>
+                </p>
+                <button class="btn-primary">REGISTER FOR FREE</button>
             </div>
-            <div class="pros">
-                <h2><span class="purple-word">Learn</span> from the pros</h2>
-                <div class="people">
-                    <div>
-                        <img src="../assets/profile_1.png" alt="Person" class="round-image">
-                        <h3>Philip Massey</h3>
-                        <blockquote>« Smile of the year » 2018 - 2019</blockquote>
-                    </div>
-                    <div>
-                        <img src="../assets/profile_2.png" alt="Person" class="round-image">
-                        <h3>Nannie Lawrence</h3>
-                        <blockquote>Best « little smile » 2017</blockquote>
-                    </div>
-                    <div>
-                        <img src="../assets/profile_3.png" alt="Person" class="round-image">
-                        <h3>Bruce Walters</h3>
-                        <blockquote>Best « Friend Smile » live performance 2019</blockquote>
-                    </div>
-                    <div>
-                        <img src="../assets/profile_4.png" alt="Person" class="round-image">
-                        <h3>Henry Hughes</h3>
-                        <blockquote>« 24h smiles » winner 2016 - 2019</blockquote>
-                    </div>
+        </section>
+
+        <section class="pros">
+            <h2><span class="purple-word">Learn</span> from the pros</h2>
+            <div class="people">
+                <div class="pro-card">
+                    <img src="../assets/profile_1.png" alt="Person" class="round-image">
+                    <h3>Philip Massey</h3>
+                    <p class="subtitle">« Smile of the year » 2018 - 2019</p>
+                </div>
+                <div class="pro-card">
+                    <img src="../assets/profile_2.png" alt="Person" class="round-image">
+                    <h3>Nannie Lawrence</h3>
+                    <p class="subtitle">Best « little smile » 2017</p>
+                </div>
+                <div class="pro-card">
+                    <img src="../assets/profile_3.png" alt="Person" class="round-image">
+                    <h3>Bruce Walters</h3>
+                    <p class="subtitle">Best « Friend Smile » live performance 2019</p>
+                </div>
+                <div class="pro-card">
+                    <img src="../assets/profile_4.png" alt="Person" class="round-image">
+                    <h3>Henry Hughes</h3>
+                    <p class="subtitle">« 24h smiles » winner 2016 - 2019</p>
                 </div>
             </div>
         </section>
+
         <section class="author">
             <div>
                 <img src="../assets/author.png" alt="Person">
@@ -60,6 +68,7 @@
                 </div>
             </div>
         </section>
+
         <section class="tutorials">
             <h1>Most <span class="purple-word">popular</span> tutorials</h1>
             <div class="group">
@@ -141,6 +150,7 @@
                 </div>
             </div>
         </section>
+
         <section class="memberships">
             <h1><span class="purple-word">Free</span> membership</h1>
             <div class="members">
@@ -165,48 +175,44 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
             </div>
-            <button>REGISTER FOR FREE</button>
+            <button class="btn-primary">REGISTER FOR FREE</button>
         </section>
+
         <section class="faq">
             <h1>F.A.Q.</h1>
             <div class="faq-bloc">
                 <div class="faq-row">
                     <div class="faq-item">
                         <h2>How does this work?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div class="faq-item">
                         <h2>How does this work?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
                 <div class="faq-row">
                     <div class="faq-item">
                         <h2>How does this work?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div class="faq-item">
                         <h2>How does this work?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
         <div class="footer-all">
             <div class="logos">
                 <img src="../assets/logo.svg" alt="Logo">
                 <div class="socials">
-                    <a href="/">
-                        <img src="../assets/icon_facebook.svg" alt="Facebook">
-                    </a>
-                    <a href="/">
-                        <img src="../assets/icon_twitter.svg" alt="Twitter">
-                    </a>
-                    <a href="/">
-                        <img src="../assets/icon_instagram.svg" alt="Instagram">
-                    </a>
+                    <a href="/"><img src="../assets/icon_facebook.svg" alt="Facebook"></a>
+                    <a href="/"><img src="../assets/icon_twitter.svg" alt="Twitter"></a>
+                    <a href="/"><img src="../assets/icon_instagram.svg" alt="Instagram"></a>
                 </div>
             </div>
             <p>©smileschool 2020</p>
